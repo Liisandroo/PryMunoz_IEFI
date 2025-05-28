@@ -22,7 +22,7 @@ namespace PryMunoz_IEFI
         {
 
             using (OleDbConnection conexion = new OleDbConnection(CadenaConexion))
-            //Crea una conexión nueva y la usa dentro de un bloque using, lo que asegura que se cierre automáticamente al salir del bloque.
+            //Crea una conexión nueva
             {
                 if (string.IsNullOrWhiteSpace(usuario) || string.IsNullOrWhiteSpace(contraseña))
                 {

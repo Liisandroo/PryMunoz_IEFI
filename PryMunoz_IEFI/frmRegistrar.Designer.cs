@@ -33,7 +33,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.cmbCategoriaMod = new System.Windows.Forms.ComboBox();
             this.lblCategoriaMod = new System.Windows.Forms.Label();
             this.lblContraseñaMod = new System.Windows.Forms.Label();
@@ -94,7 +94,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(871, 469);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Agregar y Modificar";
+            this.tabPage1.Text = "Agregar y Actualizar";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // button2
@@ -114,7 +114,7 @@
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.btnModificar);
+            this.groupBox1.Controls.Add(this.btnActualizar);
             this.groupBox1.Controls.Add(this.cmbCategoriaMod);
             this.groupBox1.Controls.Add(this.lblCategoriaMod);
             this.groupBox1.Controls.Add(this.lblContraseñaMod);
@@ -128,21 +128,21 @@
             this.groupBox1.Size = new System.Drawing.Size(429, 310);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Modificar";
+            this.groupBox1.Text = "Actualizar";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // btnModificar
+            // btnActualizar
             // 
-            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModificar.BackColor = System.Drawing.Color.White;
-            this.btnModificar.ForeColor = System.Drawing.Color.Black;
-            this.btnModificar.Location = new System.Drawing.Point(123, 238);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(189, 48);
-            this.btnModificar.TabIndex = 13;
-            this.btnModificar.Text = "MODIFICAR";
-            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizar.BackColor = System.Drawing.Color.White;
+            this.btnActualizar.ForeColor = System.Drawing.Color.Black;
+            this.btnActualizar.Location = new System.Drawing.Point(123, 238);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(189, 48);
+            this.btnActualizar.TabIndex = 13;
+            this.btnActualizar.Text = "ACTUALIZAR";
+            this.btnActualizar.UseVisualStyleBackColor = false;
             // 
             // cmbCategoriaMod
             // 
@@ -437,7 +437,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.ComboBox cmbCategoriaMod;
         private System.Windows.Forms.Label lblCategoriaMod;
         private System.Windows.Forms.Label lblContraseñaMod;

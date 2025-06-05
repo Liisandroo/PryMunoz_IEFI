@@ -120,7 +120,7 @@
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(170, 33);
             this.btnActualizar.TabIndex = 6;
-            this.btnActualizar.Text = "Reestablecer";
+            this.btnActualizar.Text = "Restablecer";
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
@@ -133,7 +133,7 @@
             this.ClientSize = new System.Drawing.Size(534, 342);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmReestablecer";
-            this.Text = "Reestablecer Contraseña";
+            this.Text = "Restablecer Contraseña";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

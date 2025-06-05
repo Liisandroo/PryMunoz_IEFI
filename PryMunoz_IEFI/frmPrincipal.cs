@@ -26,5 +26,13 @@ namespace PryMunoz_IEFI
         {
             
         }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEliminar eli = new frmEliminar();
+            eli.ShowDialog();
+            this.Close();
+
+        }
     }
 }

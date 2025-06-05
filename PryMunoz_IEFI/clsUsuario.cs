@@ -62,16 +62,32 @@ namespace PryMunoz_IEFI
                 int filas = comando.ExecuteNonQuery();
                 if (filas > 0)
                 {
-                    MessageBox.Show("Contraseña actualizada correctamente.");
+                    MessageBox.Show("Contraseña Reestablecida.");
                     return true;
                 }
                 else
                 {
-                    MessageBox.Show("No se pudo actualizar la contraseña.");
+                    MessageBox.Show("No se pudo Reestablecer la contraseña.");
                     return false;
                 }
             }
         }
+
+        public static bool EliminarUsuario(string usuario, string contrasena)
+        {
+            using (OleDbConnection conexion = clsConexion.Conexion())
+            {
+                string consulta = "DELETE FROM Crear WHERE Nombre = ? AND Contraseña = ?";
+                OleDbCommand comando = new OleDbCommand(consulta, conexion);
+
+                comando.Parameters.AddWithValue("?", usuario);
+                comando.Parameters.AddWithValue("?", contrasena);
+
+                int filas = comando.ExecuteNonQuery();
+                return filas > 0;
+            }
+        }
+
 
 
 

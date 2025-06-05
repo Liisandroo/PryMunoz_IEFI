@@ -22,19 +22,9 @@ namespace PryMunoz_IEFI
             tsslblUsuario.Text = "Bienvenido, " + usuario;
         }
 
-        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void frmPrincipal_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
+            
         }
     }
 }

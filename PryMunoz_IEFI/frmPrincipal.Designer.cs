@@ -47,7 +47,7 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.Black;
-            this.menuStrip1.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tareasToolStripMenuItem,
             this.administracionToolStripMenuItem});
@@ -61,7 +61,7 @@
             // 
             this.tareasToolStripMenuItem.BackColor = System.Drawing.Color.White;
             this.tareasToolStripMenuItem.Name = "tareasToolStripMenuItem";
-            this.tareasToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.tareasToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.tareasToolStripMenuItem.Text = "Tareas";
             // 
             // administracionToolStripMenuItem
@@ -72,24 +72,25 @@
             this.toolStripMenuItem1,
             this.auditoriaToolStripMenuItem});
             this.administracionToolStripMenuItem.Name = "administracionToolStripMenuItem";
-            this.administracionToolStripMenuItem.Size = new System.Drawing.Size(120, 20);
+            this.administracionToolStripMenuItem.Size = new System.Drawing.Size(107, 20);
             this.administracionToolStripMenuItem.Text = "Administracion";
             // 
             // usuarioToolStripMenuItem
             // 
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.usuarioToolStripMenuItem.Text = "Usuario";
+            this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(132, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
             // 
             // auditoriaToolStripMenuItem
             // 
             this.auditoriaToolStripMenuItem.Name = "auditoriaToolStripMenuItem";
-            this.auditoriaToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.auditoriaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.auditoriaToolStripMenuItem.Text = "Auditoria";
             // 
             // statusStrip1
@@ -106,11 +107,10 @@
             // tsslblUsuario
             // 
             this.tsslblUsuario.BackColor = System.Drawing.Color.White;
-            this.tsslblUsuario.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsslblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsslblUsuario.Name = "tsslblUsuario";
-            this.tsslblUsuario.Size = new System.Drawing.Size(12, 17);
+            this.tsslblUsuario.Size = new System.Drawing.Size(11, 17);
             this.tsslblUsuario.Text = "-";
-            this.tsslblUsuario.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
             // 
             // pictureBox1
             // 
@@ -121,7 +121,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // dateTimePicker1
             // 
@@ -143,7 +142,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmPrincipal";
             this.Text = "Sistema Principal";
-            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);

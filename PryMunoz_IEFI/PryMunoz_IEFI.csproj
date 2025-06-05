@@ -46,6 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsConexion.cs" />
+    <Compile Include="clsUsuario.cs" />
+    <Compile Include="frmCrear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrear.Designer.cs">
+      <DependentUpon>frmCrear.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,22 +66,25 @@
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRegistrar.cs">
+    <Compile Include="frmReestablecer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRegistrar.Designer.cs">
-      <DependentUpon>frmRegistrar.cs</DependentUpon>
+    <Compile Include="frmReestablecer.Designer.cs">
+      <DependentUpon>frmReestablecer.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCrear.resx">
+      <DependentUpon>frmCrear.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRegistrar.resx">
-      <DependentUpon>frmRegistrar.cs</DependentUpon>
+    <EmbeddedResource Include="frmReestablecer.resx">
+      <DependentUpon>frmReestablecer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

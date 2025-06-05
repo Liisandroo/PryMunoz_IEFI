@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace PryMunoz_IEFI
 {
@@ -17,20 +18,19 @@ namespace PryMunoz_IEFI
         {
             InitializeComponent();
         }
-        private string CadenaConexion = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Inicio.mdb";
+        
+
         private bool ValidarLogin(string usuario, string contraseña)
         {
 
-            using (OleDbConnection conexion = new OleDbConnection(CadenaConexion))
-            //Crea una conexión nueva
+            using (OleDbConnection conexion = clsConexion.Conexion())
             {
                 if (string.IsNullOrWhiteSpace(usuario) || string.IsNullOrWhiteSpace(contraseña))
                 {
                     MessageBox.Show("Ingresá usuario y contraseña.");
                     return false;
                 }
-                conexion.Open();
-                string consulta = "SELECT COUNT(*) FROM Inicio WHERE nombre = ? AND contraseña = ?";
+                string consulta = "SELECT COUNT(*) FROM Crear WHERE nombre = ? AND contraseña = ?";
                 using (OleDbCommand comando = new OleDbCommand(consulta, conexion))
                 {
                     comando.Parameters.AddWithValue("?", usuario);
@@ -41,33 +41,6 @@ namespace PryMunoz_IEFI
                 }
             }
         }
-
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             string usuario = txtUsuario.Text.Trim();
@@ -84,6 +57,25 @@ namespace PryMunoz_IEFI
             {
                 MessageBox.Show("Usuario o contraseña incorrectos.");
             }
+        }
+
+        private void btnupa_Click(object sender, EventArgs e)
+        {
+            frmCrear cuak = new frmCrear();
+            cuak.Show();
+
+        }
+
+        private void lblCrear_Click(object sender, EventArgs e)
+        {
+            frmCrear dou = new frmCrear();
+            dou.Show();
+        }
+
+        private void lblOlvidar_Click(object sender, EventArgs e)
+        {
+            frmReestablecer olvi = new frmReestablecer();
+            olvi.Show();
         }
     }
 }

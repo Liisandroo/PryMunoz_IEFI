@@ -46,6 +46,10 @@ namespace PryMunoz_IEFI
             string usuario = txtUsuario.Text.Trim();
             string contraseña = txtContra.Text;
 
+            clsSesion.UsuarioActual = usuario;
+            clsSesion.HoraInicio = DateTime.Now;
+
+
             if (ValidarLogin(usuario, contraseña))
             {
                 MessageBox.Show("Inicio de sesión exitoso.");
@@ -76,6 +80,11 @@ namespace PryMunoz_IEFI
         {
             frmReestablecer olvi = new frmReestablecer();
             olvi.Show();
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

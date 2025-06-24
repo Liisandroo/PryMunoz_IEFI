@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace PryMunoz_IEFI
 {
@@ -32,6 +34,47 @@ namespace PryMunoz_IEFI
             frmEliminar eli = new frmEliminar();
             eli.ShowDialog();
             this.Close();
+
+        }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+             TimeSpan tiempoUso = DateTime.Now - clsSesion.HoraInicio;
+
+            // *** CAMBIO CRÍTICO AQUÍ: Añadir un prefijo no numérico a la cadena de tiempo ***
+            // Esto fuerza a Jet 4.0 a tratarlo como texto puro, no como un valor de tiempo.
+            string tiempoUsoString = $"{tiempoUso.Hours:D2}:{tiempoUso.Minutes:D2}:{tiempoUso.Seconds:D2}";
+            // Ejemplo de resultado: "01:23:45"
+
+            using (OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Usuarios.mdb"))
+            {
+                conn.Open();
+                string query = "INSERT INTO Sesiones (Usuario, FechaIngreso, TiempoUso) VALUES (?, ?, ?)";
+                using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("?", clsSesion.UsuarioActual); // string -> Texto corto (OK)
+                    cmd.Parameters.AddWithValue("?", clsSesion.HoraInicio);    // DateTime -> Fecha/Hora (OK)
+                    cmd.Parameters.AddWithValue("?", tiempoUsoString);         // string -> Texto corto (este es el cambio clave para TiempoUso)
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
+        }
+
+        private void auditoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAuditoria di = new frmAuditoria();
+            di.ShowDialog();
+            this.Close();
+        }
+
+        private void tareasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
         }
     }

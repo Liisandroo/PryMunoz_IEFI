@@ -46,8 +46,6 @@ namespace PryMunoz_IEFI
         {
              TimeSpan tiempoUso = DateTime.Now - clsSesion.HoraInicio;
 
-            // *** CAMBIO CRÍTICO AQUÍ: Añadir un prefijo no numérico a la cadena de tiempo ***
-            // Esto fuerza a Jet 4.0 a tratarlo como texto puro, no como un valor de tiempo.
             string tiempoUsoString = $"{tiempoUso.Hours:D2}:{tiempoUso.Minutes:D2}:{tiempoUso.Seconds:D2}";
             // Ejemplo de resultado: "01:23:45"
 
@@ -57,9 +55,9 @@ namespace PryMunoz_IEFI
                 string query = "INSERT INTO Sesiones (Usuario, FechaIngreso, TiempoUso) VALUES (?, ?, ?)";
                 using (OleDbCommand cmd = new OleDbCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("?", clsSesion.UsuarioActual); // string -> Texto corto (OK)
-                    cmd.Parameters.AddWithValue("?", clsSesion.HoraInicio);    // DateTime -> Fecha/Hora (OK)
-                    cmd.Parameters.AddWithValue("?", tiempoUsoString);         // string -> Texto corto (este es el cambio clave para TiempoUso)
+                    cmd.Parameters.AddWithValue("?", clsSesion.UsuarioActual); // string -> Texto corto
+                    cmd.Parameters.AddWithValue("?", clsSesion.HoraInicio.ToString("yyyy-MM-dd HH:mm:ss"));
+                    cmd.Parameters.AddWithValue("?", tiempoUsoString);         // string -> Texto corto 
                     cmd.ExecuteNonQuery();
                 }
             }

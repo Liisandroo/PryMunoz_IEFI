@@ -145,6 +145,7 @@
             this.Controls.Add(this.lblOlvidar);
             this.Controls.Add(this.lblCrear);
             this.Controls.Add(this.dateTimePicker1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogin";
             this.Text = "Login";
             this.groupBox1.ResumeLayout(false);

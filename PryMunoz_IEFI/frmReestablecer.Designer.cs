@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReestablecer));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtNuevaContraseña = new System.Windows.Forms.TextBox();
-            this.txtConfirmar = new System.Windows.Forms.TextBox();
             this.btnActualizar = new System.Windows.Forms.Button();
+            this.txtConfirmar = new System.Windows.Forms.TextBox();
+            this.txtNuevaContraseña = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,28 +57,38 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // label1
+            // btnActualizar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(94, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Usuario";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.btnActualizar.BackColor = System.Drawing.Color.Black;
+            this.btnActualizar.ForeColor = System.Drawing.Color.White;
+            this.btnActualizar.Location = new System.Drawing.Point(157, 205);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(170, 33);
+            this.btnActualizar.TabIndex = 6;
+            this.btnActualizar.Text = "Restablecer";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
-            // label2
+            // txtConfirmar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(64, 88);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 18);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nueva Contraseña";
+            this.txtConfirmar.Location = new System.Drawing.Point(251, 139);
+            this.txtConfirmar.Name = "txtConfirmar";
+            this.txtConfirmar.Size = new System.Drawing.Size(190, 24);
+            this.txtConfirmar.TabIndex = 5;
+            // 
+            // txtNuevaContraseña
+            // 
+            this.txtNuevaContraseña.Location = new System.Drawing.Point(251, 86);
+            this.txtNuevaContraseña.Name = "txtNuevaContraseña";
+            this.txtNuevaContraseña.Size = new System.Drawing.Size(190, 24);
+            this.txtNuevaContraseña.TabIndex = 4;
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(251, 38);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(190, 24);
+            this.txtUsuario.TabIndex = 3;
             // 
             // label3
             // 
@@ -91,38 +101,28 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Confirma Contraseña";
             // 
-            // txtUsuario
+            // label2
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(251, 38);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(190, 24);
-            this.txtUsuario.TabIndex = 3;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(64, 88);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(120, 18);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Nueva Contraseña";
             // 
-            // txtNuevaContraseña
+            // label1
             // 
-            this.txtNuevaContraseña.Location = new System.Drawing.Point(251, 86);
-            this.txtNuevaContraseña.Name = "txtNuevaContraseña";
-            this.txtNuevaContraseña.Size = new System.Drawing.Size(190, 24);
-            this.txtNuevaContraseña.TabIndex = 4;
-            // 
-            // txtConfirmar
-            // 
-            this.txtConfirmar.Location = new System.Drawing.Point(251, 139);
-            this.txtConfirmar.Name = "txtConfirmar";
-            this.txtConfirmar.Size = new System.Drawing.Size(190, 24);
-            this.txtConfirmar.TabIndex = 5;
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.BackColor = System.Drawing.Color.Black;
-            this.btnActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar.Location = new System.Drawing.Point(153, 227);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(170, 33);
-            this.btnActualizar.TabIndex = 6;
-            this.btnActualizar.Text = "Restablecer";
-            this.btnActualizar.UseVisualStyleBackColor = false;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(94, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Usuario";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // frmReestablecer
             // 
@@ -132,6 +132,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(534, 342);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmReestablecer";
             this.Text = "Restablecer Contraseña";
             this.groupBox1.ResumeLayout(false);

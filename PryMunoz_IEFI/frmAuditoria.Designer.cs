@@ -79,6 +79,7 @@
             this.Controls.Add(this.dgvGrilla);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.btnVolver);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAuditoria";
             this.Text = "Auditoria";
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).EndInit();

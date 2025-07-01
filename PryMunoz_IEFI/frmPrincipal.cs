@@ -75,5 +75,19 @@ namespace PryMunoz_IEFI
         {
 
         }
+
+        private void registrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRegistrarTarea de = new frmRegistrarTarea();
+            de.ShowDialog();
+            this.Close();
+        }
+
+        private void historialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmHistorial a = new frmHistorial();
+            a.ShowDialog();
+            this.Close();
+        }
     }
 }

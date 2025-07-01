@@ -67,6 +67,7 @@ namespace PryMunoz_IEFI
         {
             frmCrear cuak = new frmCrear();
             cuak.Show();
+            this.Close();
 
         }
 
@@ -74,12 +75,14 @@ namespace PryMunoz_IEFI
         {
             frmCrear dou = new frmCrear();
             dou.Show();
+            this.Close();
         }
 
         private void lblOlvidar_Click(object sender, EventArgs e)
         {
             frmReestablecer olvi = new frmReestablecer();
             olvi.Show();
+            this.Close();
         }
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
